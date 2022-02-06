@@ -1,0 +1,28 @@
+const redisign__swiper = new Swiper('.redisign__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    slidesPerView: "auto",
+    spaceBetween: 200,
+    allowTouchMove: true,
+    // centeredSlides: true,
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
+
+const create__swiper = new Swiper('.create__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
