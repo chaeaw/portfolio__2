@@ -1,4 +1,4 @@
-const redisign__swiper = new Swiper('.redisign__swiper', {
+const redesign__swiper = new Swiper('.redesign__swiper', {
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: "auto",

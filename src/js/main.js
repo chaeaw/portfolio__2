@@ -1,5 +1,6 @@
 
 
+
 //nav ani
 setTimeout(function(){
     gsap.to("#nav", {
@@ -61,7 +62,6 @@ const observerOptions = {
 
 const observerCallback = ( entries, observer ) => {
     entries.forEach( entry => {
-        console.log(entry.target.id, entry.isIntersecting, entry.intersectionRatio, entry.boundingClientRect.y);
         if(!entry.isIntersecting && entry.intersectionRatio > 0) {
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             if(entry.boundingClientRect.y < 0) {
@@ -94,6 +94,11 @@ window.addEventListener('wheel', () => {
     }
 })
 
+window.addEventListener("load", () => {
+    selectNavItem(navItems[selectedNavIndex]);
+
+})
+
 
 
 
@@ -122,6 +127,7 @@ function color1(i,classname,colorname){
     $(classname).css({"background" : `conic-gradient(${colorname} 0% ${i}%, var(--light--blue) ${i}% 100%)`});
 }
 
+var is_action = false;
 function draw(max, classname, colorname){
     var i=1;
     var func1 = setInterval(function(){
@@ -132,10 +138,46 @@ function draw(max, classname, colorname){
             clearInterval(func1);
         }
     },10);
+
 }
 
-draw(90, ".circle1", "var(--dark--blue)");
-draw(85, ".circle2", "var(--dark--blue)");
-draw(70, ".circle3", "var(--dark--blue)");
-draw(90, ".circle4", "var(--dark--blue)");
-draw(80, ".circle5", "var(--dark--blue)");
+const drawAll = function(){
+    draw(90, ".circle1", "var(--dark--blue)");
+    draw(85, ".circle2", "var(--dark--blue)");
+    draw(70, ".circle3", "var(--dark--blue)");
+    draw(90, ".circle4", "var(--dark--blue)");
+    draw(80, ".circle5", "var(--dark--blue)");
+
+}
+
+
+const scrollSection = function (){
+    var theSection, winH;
+
+    const initModule = function(){
+        theSection = document.querySelectorAll("section");
+        winH = window.innerHeight;
+        _addEventHandlers();
+    }
+
+    var _addEventHandlers = function() {
+        window.addEventListener("scroll", _checkPosition);
+        window.addEventListener("load", _checkPosition);
+        window.addEventListener("resize", initModule);
+    };
+
+    var _checkPosition = function (){
+        var skillsTop = theSection[2].getBoundingClientRect().top;
+        var redesignArticle = querySelector(".works__redesign")
+        console.log(skillsTop)
+        if (winH > skillsTop &&!is_action) {      
+            drawAll()
+            is_action = true;
+        }
+    }
+    return {
+        init: initModule
+    }
+}
+
+scrollSection().init();
