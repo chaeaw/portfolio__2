@@ -33,8 +33,14 @@ document.addEventListener('click', (event) => {
     const selected = document.querySelector('.nav__items.selected');
     selected.classList.remove('selected');
     target.classList.add('selected');
+})
 
 
+const homeBtn = document.querySelector(".home__btn");
+
+homeBtn.addEventListener("click", (event) => {
+    const contactSection = document.querySelector("#section5");
+    scrollTheSection(contactSection);
 })
 
 //scrolling ths nav items has class selected
@@ -63,6 +69,7 @@ const observerOptions = {
 const observerCallback = ( entries, observer ) => {
     entries.forEach( entry => {
         if(!entry.isIntersecting && entry.intersectionRatio > 0) {
+            console.log(entry.target.id, entry.boundingClientRect.y)
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             if(entry.boundingClientRect.y < 0) {
                 selectedNavIndex = index + 1;
@@ -70,7 +77,7 @@ const observerCallback = ( entries, observer ) => {
                 selectedNavIndex = index - 1;
             }
         };
-
+        
         if(selectedNavIndex == 1 || selectedNavIndex == 3 || selectedNavIndex == 4) {
             const nav = document.getElementById("nav");
             nav.classList.add("active");
@@ -85,6 +92,15 @@ const observer = new IntersectionObserver( observerCallback, observerOptions);
 
 sections.forEach(section => observer.observe(section));
 
+window.addEventListener("load", () => {
+    selectNavItem(navItems[selectedNavIndex]);
+    if ( window.scrollY === 0 ) {
+        selectedNavIndex = 0 ;
+    } else if ( Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
+        selectedNavIndex = navItems.length - 1;
+    }
+});
+
 window.addEventListener('wheel', () => {
     selectNavItem(navItems[selectedNavIndex]);
     if ( window.scrollY === 0 ) {
@@ -92,12 +108,8 @@ window.addEventListener('wheel', () => {
     } else if ( Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
         selectedNavIndex = navItems.length - 1;
     }
-})
+});
 
-window.addEventListener("load", () => {
-    selectNavItem(navItems[selectedNavIndex]);
-
-})
 
 
 
@@ -137,7 +149,7 @@ function draw(max, classname, colorname){
         } else {
             clearInterval(func1);
         }
-    },10);
+    },15);
 
 }
 
@@ -160,20 +172,54 @@ const scrollSection = function (){
         _addEventHandlers();
     }
 
-    var _addEventHandlers = function() {
+    const _addEventHandlers = function() {
         window.addEventListener("scroll", _checkPosition);
         window.addEventListener("load", _checkPosition);
         window.addEventListener("resize", initModule);
     };
 
-    var _checkPosition = function (){
-        var skillsTop = theSection[2].getBoundingClientRect().top;
-        var redesignArticle = querySelector(".works__redesign")
-        console.log(skillsTop)
-        if (winH > skillsTop &&!is_action) {      
+    const _checkPosition = function (){
+        const skillsTop = theSection[2].getBoundingClientRect().top;
+        
+        var count_action = false;
+        
+        if (skillsTop - winH < -350 &&!is_action) {      
             drawAll()
             is_action = true;
+            
+            const counters = document.querySelectorAll('.items__value');
+            counters.forEach(counter => {
+                counter.innerText = '0'
+    
+                const updateCounter = () => {
+                    const target = +counter.getAttribute('data-target')
+                    const c = +counter.innerText
+    
+                    const increment = target / 25
+                    if (c < target && !count_action) {
+                        counter.innerText = `${Math.ceil(c + increment)}`
+                        setTimeout(updateCounter, 50)
+                    } else {
+                        counter.innerText = target;
+                        count_action = true
+                    }
+                }
+                updateCounter();
+            });
         }
+
+        const redesignArticle = document.querySelector(".works__redesign");
+        const redesignTop = redesignArticle.getBoundingClientRect().top;
+        if(redesignTop - winH < -50 ){
+            redesignArticle.classList.add("active");
+        }
+
+        const creativeArticle = document.querySelector(".works__create");
+        const createTop = creativeArticle.getBoundingClientRect().top;
+        if(createTop - winH < -50 ){
+            creativeArticle.classList.add("active");
+        }
+
     }
     return {
         init: initModule
@@ -181,3 +227,13 @@ const scrollSection = function (){
 }
 
 scrollSection().init();
+
+function swiperReload(){
+    const swiperAll = document.querySelectorAll(".swiper-wrapper");
+    console.log(swiperAll[0].style)
+    for (i=0; i < 2; i++) {
+        swiperAll[i].style.marginLeft = "20vw";
+    }
+}
+
+window.addEventListener("resize", swiperReload  );
