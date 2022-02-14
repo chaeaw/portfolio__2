@@ -210,13 +210,13 @@ const scrollSection = function (){
 
         const redesignArticle = document.querySelector(".works__redesign");
         const redesignTop = redesignArticle.getBoundingClientRect().top;
-        if(redesignTop - winH < -50 ){
+        if(redesignTop - winH < -80 ){
             redesignArticle.classList.add("active");
         }
 
         const creativeArticle = document.querySelector(".works__create");
         const createTop = creativeArticle.getBoundingClientRect().top;
-        if(createTop - winH < -50 ){
+        if(createTop - winH < -80 ){
             creativeArticle.classList.add("active");
         }
 
@@ -228,12 +228,12 @@ const scrollSection = function (){
 
 scrollSection().init();
 
-function swiperReload(){
-    const swiperAll = document.querySelectorAll(".swiper-wrapper");
-    console.log(swiperAll[0].style)
-    for (i=0; i < 2; i++) {
-        swiperAll[i].style.marginLeft = "20vw";
-    }
-}
+// function swiperReload(){
+//     const swiperAll = document.querySelectorAll(".swiper-wrapper");
+//     console.log(swiperAll[0].style)
+//     for (i=0; i < 2; i++) {
+//         swiperAll[i].style.marginLeft = "20vw";
+//     }
+// }
 
-window.addEventListener("resize", swiperReload  );
+// window.addEventListener("resize", swiperReload  );

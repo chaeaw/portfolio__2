@@ -4,12 +4,37 @@
 /* ~ 1240px */
 @media (max-width: 1240px){
 
-    .swiper__btn {
+    /* home section */
+    .home__btn {
+        margin-top: 3rem;
+    }
+
+    .title__top {
+        font-size: 42px ;
+    }
+
+    .title__middle {
+        font-size: 76px;
+    }
+
+    .title__bottom {
+        font-size: 38px;
+    }
+
+
+
+    /* works section */
+    .slides__btn {
         margin-top: 30px;
     }
 
-    .swiper__btn > a {
+    .slides__btn > a {
         font-size: 18px;
         padding: 10px 28px;
     }
+
+    .works__slides .next {
+        right: 18vw;
+    }
+
 }
