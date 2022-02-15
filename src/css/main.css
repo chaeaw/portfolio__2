@@ -414,6 +414,10 @@ background-size: 300% 100%;
     color: var(--dark--blue);
 }
 
+.profile__my .my i {
+    font-size: 22px;
+}
+
 .profile__content span {
     display: block;
     color: var(--blue);
@@ -433,6 +437,7 @@ background-size: 300% 100%;
 }
 
 .profile__content span.profile__career {
+    font-family: var(--nanum--r);
     margin-top: 20px;
     opacity: 0.8;
     font-size: 24px;

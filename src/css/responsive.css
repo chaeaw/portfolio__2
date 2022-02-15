@@ -23,8 +23,26 @@
     }
 
 
+    /* profile section2 */
 
-    /* works section2 */
+    .profile__my .my {
+        font-size: 28px;
+    }
+    .profile__my .my i {
+        font-size: 20px;
+    }
+
+    .profile__content span.profile__hope {
+        font-size: 24px;
+    }
+
+    .profile__content span.profile__career {
+        font-size: 20px;
+        font-family: var(--nanum--r);
+    }
+
+
+    /* works section4 */
     .slides__btn {
         margin-top: 30px;
     }
@@ -177,6 +195,10 @@
     
     .profile__my .my {
         line-height: 1.4;
+    }
+
+    .profile__my .my i {
+        font-size: 18px;
     }
 
     .profile__my span.profile__desc {
