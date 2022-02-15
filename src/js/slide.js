@@ -9,20 +9,63 @@ let redesignCurrentIdx = 0;
 const redesignSlideCnt = redesignSlides.length;
 const redesignPrev = document.querySelector(".redesign__slides .redesign__prev");
 const redesignNext = document.querySelector(".redesign__slides .redesign__next");
-const slideWidth = 75;
+var slideWidth =  100;
 
-redesignSlide.style.width = slideWidth * redesignSlideCnt + "vw";
 
 function moveRedesign(num){
-    redesignSlide.style.left = -num * 75 + "vw";
+    
+    redesignSlide.style.left = -num * slideWidth + "vw";
+    
     redesignCurrentIdx = num;
     redesignSlides.forEach((e) => {
-        console.log(e);
         e.classList.remove("active");
     })
     const target = redesignSlides[num];
     target.classList.add("active");
 }
+
+// create
+
+const createSlide = document.querySelector(".create__slides .slides__flex");
+const createSlides = document.querySelectorAll(".create__slides .slides__flex li");
+let createCurrentIdx = 0;
+const createSlideCnt = createSlides.length;
+const createPrev = document.querySelector(".create__slides .create__prev");
+const createNext = document.querySelector(".create__slides .create__next");
+
+
+function moveCreate(num){
+
+    createSlide.style.left = -num * slideWidth + "vw";
+
+    createCurrentIdx = num;
+    createSlides.forEach((e) => {
+        e.classList.remove("active");
+    })
+    const target = createSlides[num];
+    target.classList.add("active");
+}
+
+
+
+function tabletSlide() {
+    var winW = window.innerWidth;
+    console.log(winW)
+    if (winW < 1024 ){
+        slideWidth = 100;
+    } else {
+        slideWidth = 75;
+    }
+    redesignSlide.style.width = slideWidth * redesignSlideCnt + "vw";
+    createSlide.style.width = slideWidth * createSlideCnt + "vw";
+
+    redesignSlide.style.left = -redesignCurrentIdx * slideWidth + "vw";
+    createSlide.style.left = -createCurrentIdx * slideWidth + "vw";
+
+
+
+}
+
 
 redesignPrev.addEventListener("click", function(){
     if(redesignCurrentIdx !== 0) { 
@@ -36,29 +79,6 @@ redesignNext.addEventListener("click", function(){
     }
 })
 
-
-
-// create
-
-const createSlide = document.querySelector(".create__slides .slides__flex");
-const createSlides = document.querySelectorAll(".create__slides .slides__flex li");
-let createCurrentIdx = 0;
-const createSlideCnt = createSlides.length;
-const createPrev = document.querySelector(".create__slides .create__prev");
-const createNext = document.querySelector(".create__slides .create__next");
-
-createSlide.style.width = slideWidth * createSlideCnt + "vw";
-
-function moveCreate(num){
-    createSlide.style.left = -num * 75 + "vw";
-    createCurrentIdx = num;
-    createSlides.forEach((e) => {
-        e.classList.remove("active");
-    })
-    const target = createSlides[num];
-    target.classList.add("active");
-}
-
 createPrev.addEventListener("click", function(){
     if(createCurrentIdx !== 0) { 
         moveCreate(createCurrentIdx - 1) 
@@ -70,3 +90,6 @@ createNext.addEventListener("click", function(){
         moveCreate(createCurrentIdx + 1);
     };
 })
+
+window.addEventListener("resize", tabletSlide);
+window.addEventListener("load", tabletSlide);

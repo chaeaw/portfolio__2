@@ -129,13 +129,14 @@
     text-align: center;
 }
 
-.works__slides button {
+.works__slides .prev, .next {
     border: none;
     position: absolute;
     top: 47%;
     width: 33px;
     height: 57px;
     cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 
 .works__slides .prev {
@@ -143,7 +144,15 @@
     background: url('/src/img/swiper_arrow.png') no-repeat -3px -2px;
 }
 
+.works__slides .prev:hover {
+    transform: translateX( -10px );
+}
+
 .works__slides .next {
     right: 24vw;
     background: url('/src/img/swiper_arrow.png') no-repeat -46px -2px;
+}
+
+.works__slides .next:hover {
+    transform: translateX(10px);
 }
