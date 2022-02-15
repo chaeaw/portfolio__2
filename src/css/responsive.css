@@ -159,7 +159,7 @@
     }
 
     .profile__img {
-        width: 32vw;
+        width: 30vw;
         margin: 0 auto;
     }
 
@@ -181,6 +181,11 @@
 
     .profile__my span.profile__desc {
         font-size: 18px;
+    }
+
+    .profile__my span.profile__hope {
+        margin-top: 8px;
+        font-size: 21px;
     }
 
     .profile__desc i {

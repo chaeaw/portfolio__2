@@ -424,7 +424,18 @@ background-size: 300% 100%;
 }
 
 .profile__content span.profile__desc {
-    font-size: 26px;
+    font-size: 28px;
+}
+
+.profile__content span.profile__hope b {
+    color: var(--dark--blue);
+    font-family: var(--nanum--eb);
+}
+
+.profile__content span.profile__career {
+    margin-top: 20px;
+    opacity: 0.8;
+    font-size: 24px;
 }
 
 .profile__desc i {
