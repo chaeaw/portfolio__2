@@ -332,15 +332,12 @@ background-size: 300% 100%;
     cursor: pointer;
     text-transform: uppercase;
     z-index: 10;
-}
-
-.home__btn p {
     color: var(--light--blue);
-    display: inline-block;
 }
 
 .home__btn:hover {
     background-color: var(--light--blue);
+    color: var(--white);
 }
 
 .home__btn:hover p {

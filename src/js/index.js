@@ -39,13 +39,13 @@ document.addEventListener('click', (event) => {
 const homeBtn = document.querySelector(".home__btn");
 
 homeBtn.addEventListener("click", (event) => {
-    const contactSection = document.querySelector("#section5");
+    const contactSection = document.querySelector("#footer");
     scrollTheSection(contactSection);
 })
 
 //scrolling ths nav items has class selected
 
-const sectionIds = ['#section1', '#section2', '#section3', '#section4', '#section5'];
+const sectionIds = ['#section1', '#section2', '#section3', '#section4', '#footer'];
 
 const sections = sectionIds.map( id => document.querySelector(id));
 

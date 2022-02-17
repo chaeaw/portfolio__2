@@ -299,7 +299,7 @@
         right: 10vw;
     }
 
-    /* contact section5 */
+    /* contact footer */
 
     .contact__desc > p > span.contact__title {
         font-size: 38px;
@@ -345,6 +345,13 @@
         min-height: 220px;
     }
 
+    .works__slides .prev {
+        left: calc( 4px + 2vw );
+    }
+
+    .works__slides .next {
+        right: calc( 4px + 2vw);
+    }
     .contact__desc > p > span.contact__title {
         font-size: 32px;
     }
