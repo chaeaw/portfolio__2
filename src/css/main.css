@@ -135,14 +135,15 @@ a {
     background-color: transparent;
 }
 
-#header .tablet__menu {
+/* mobile nav */
+.mobile__menu {
     display: none;
     cursor: pointer;
     padding: 5px;
     box-sizing: border-box;
 }
 
-#header .tablet__menu .bar {
+.mobile__bar .bars {
     display: block;
     width: 30px;
     height: 4px;
@@ -150,8 +151,74 @@ a {
     border-radius: 30px;
 }
 
-#header .tablet__menu .bar:nth-child(2) {
+.mobile__bar .bars:nth-child(2) {
     margin: 6px 0;
+}
+
+.mobile__bar:hover .bars{
+    background-color: var(--pink);
+}
+
+
+.mobile__menu .mobile__nav {
+    position: absolute;
+    background-color:var(--bg--blue);
+    top: 80px; left: 0;
+    width: 100%;
+    padding: 18px 0;
+    display: none;
+}
+
+.mobile__menu .mobile__nav.open {
+    display: block;
+}
+
+.mobile__nav .mobile__navItems {
+    font-size: 22px;
+    color: var(--dark--blue);
+    text-align: center;
+    font-family: var(--montserrat);
+    font-weight: 400;
+    margin: 12px 5%;
+}
+
+.mobile__navItems span {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.mobile__navItems p {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 18px 0;
+}
+
+.mobile__navItems:hover p {
+    background-color: var(--white);   
+}
+
+.mobile__navItems:hover span::before {
+    background-color: var(--light--blue);
+    display: block;
+}
+
+.mobile__navItems span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -4px; left: -10px;
+    z-index: -1;
+    display: none;
+}
+
+.mobile__navItems.selected span::before {
+    border: 1px dashed var(--dark--blue);
+    display: block;
 }
 
 #nav {

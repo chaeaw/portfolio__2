@@ -114,6 +114,9 @@
         display: none;
     }
     
+    .mobile__menu {
+        display: block;
+    }
 
     /* home section1 */
 
@@ -331,6 +334,10 @@
 
     #header {
         height: 60px;
+    }
+    
+    .mobile__menu .mobile__nav {
+        top: 60px;
     }
 
     .sections, .articles {

@@ -228,12 +228,33 @@ const scrollSection = function (){
 
 scrollSection().init();
 
-// function swiperReload(){
-//     const swiperAll = document.querySelectorAll(".swiper-wrapper");
-//     console.log(swiperAll[0].style)
-//     for (i=0; i < 2; i++) {
-//         swiperAll[i].style.marginLeft = "20vw";
-//     }
-// }
 
-// window.addEventListener("resize", swiperReload  );
+const mobileNavBtn = document.querySelector(".mobile__menu");
+const mobileNav = document.querySelector(".mobile__nav");
+
+function mobileNavOpen (){
+    mobileNav.classList.toggle("open");
+}
+
+mobileNavBtn.addEventListener("click", () => {
+    mobileNavOpen();
+})
+
+document.addEventListener('click', (event) => {
+    const target = event.target.nodeName === 'P' ? event.target : event.target.parentNode;
+    const realTarget = target.parentNode;
+    const mlink = realTarget.dataset.mlink;
+
+    if(mlink == null) {
+        return;
+    }
+
+    const selecMenu = document.querySelector(mlink);
+
+    scrollTheSection(selecMenu);
+
+    // nav items is clicked changing the color
+    const selected = document.querySelector('.mobile__navItems.selected');
+    selected.classList.remove('selected');
+    realTarget.classList.add('selected');
+})
