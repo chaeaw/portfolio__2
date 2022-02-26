@@ -68,7 +68,6 @@
     /* common */
     .sections {
         height: calc( 100vh - 80px);
-        min-height: 919px;
         padding: 0 40px;
         padding-top: 80px;
         box-sizing: border-box;
