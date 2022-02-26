@@ -289,6 +289,7 @@
     }
 
     .slides__con {
+        padding-left: 0px;
         margin-top: 40px;
     }
     .slides__con > .slides__num {
@@ -348,16 +349,25 @@
         width: 670px;
     }
     
+    .profile__my {
+        min-width: 0px;
+    }
     .slides__flex .slides__list > img {
         min-height: 220px;
     }
 
+    .works__bg {
+        height: 77vh;
+    }
+    .slides__flex .slides__list > img {
+        min-height: 180px;
+    }
     .works__slides .prev {
-        left: calc( 4px + 2vw );
+        left: calc( 4px + 5vw );
     }
 
     .works__slides .next {
-        right: calc( 4px + 2vw);
+        right: calc( 4px + 5vw);
     }
 
     .works__slides .prev:hover {
