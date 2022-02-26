@@ -587,7 +587,7 @@ background-size: 300% 100%;
     border-radius: 50%;
     text-align: center;
     color: var(--white);
-    font: bold 28px var(--nanum--b);
+    font: bold 27px var(--nanum--b);
     backface-visibility: hidden;
     transition: 0.5s;
     word-break: break-all;
@@ -677,20 +677,29 @@ background-size: 300% 100%;
     margin-bottom: 45px;
 }
 
-.contact__desc > p > span, span+a {
+.contact__desc .contact__title, .contact__email, .contact__github {
     display: block;
-    color: var(--dark--blue);
-    font : var(--regular) 36px var(--nanum--eb);
+    font-family: var(--nanum--eb);
     text-align: center;
+    color: var(--dark--blue);
 }
 
 .contact__desc > p > span.contact__title {
+    color: var(--dark--blue);
     font-size: 40px;
     margin-bottom: 8px;
 }
 
 .contact__desc > p > span > i {
     margin-right: 12px;
+}
+
+.contact__desc .contact__email, .contact__github {
+    font-size: 36px;
+}
+
+.contact__desc .contact__github:hover {
+    color: var(--light--blue);
 }
 
 .contact__thx {

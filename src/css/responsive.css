@@ -245,6 +245,10 @@
         min-height: 150px;
     }
 
+    .items__back {
+        font-size: 25px;
+    }
+
     /* works section4 */
 
     .works__bg {
