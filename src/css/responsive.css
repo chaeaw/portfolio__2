@@ -359,6 +359,15 @@
     .works__slides .next {
         right: calc( 4px + 2vw);
     }
+
+    .works__slides .prev:hover {
+        transform: translateX(0px);
+    }
+
+    .works__slides .next:hover {
+        transform: translateX(0px);
+    }
+
     .contact__desc > p > span.contact__title {
         font-size: 32px;
     }
