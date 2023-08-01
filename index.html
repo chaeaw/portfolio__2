@@ -2,273 +2,290 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
 
+  <!-- css -->
+  <link rel="stylesheet" href="src/css/reset.css" />
+  <link rel="stylesheet" href="src/css/slide.css" />
+  <link rel="stylesheet" href="src/css/main.css" />
+  <link rel="stylesheet" href="src/css/responsive.css" />
 
-    <!-- css -->
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/slide.css">
-    <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/responsive.css">
-
-    <title>MJ's PORTFOILO</title>
-    <!-- js -->
-    <script src="https://kit.fontawesome.com/3f5a4152c4.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
-        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <title>MJ's PORTFOILO</title>
+  <!-- js -->
+  <script src="https://kit.fontawesome.com/3f5a4152c4.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    <header id="header">
-        <h1 class="logo">
-            <a href="#" class="logo__name">MJ's PORTFOLIO</a>
-        </h1>
-        <nav class="mobile__menu">
-            <div class="mobile__bar">
-                <span class="bars"></span><span class="bars"></span><span class="bars"></span>
-            </div>
-            <ul class="mobile__nav">
-                <li class="mobile__navItems selected" data-mlink="#section1"><p><span>Home</span></p></li>
-                <li class="mobile__navItems" data-mlink="#section2"><p><span>Profile</span></p></li>
-                <li class="mobile__navItems" data-mlink="#section3"><p><span>Skills</span></p></li>
-                <li class="mobile__navItems" data-mlink="#section4"><p><span>Works</span></p></li>
-                <li class="mobile__navItems" data-mlink="#footer"><p><span>Contact</span></p></li>
-            </ul>
-        </nav>
-        <nav id="nav">
-            <ul class="nav__container">
-                <li class="nav__items selected" data-link="#section1">
-                    <div class="navItems__circle"></div><span>home</span>
-                </li>
-                <li class="nav__items" data-link="#section2">
-                    <div class="navItems__circle"></div><span>profile</span>
-                </li>
-                <li class="nav__items" data-link="#section3">
-                    <div class="navItems__circle"></div><span>skills</span>
-                </li>
-                <li class="nav__items" data-link="#section4">
-                    <div class="navItems__circle"></div><span>works</span>
-                </li>
-                <li class="nav__items" data-link="#footer">
-                    <div class="navItems__circle"></div><span>contact</span>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="section1" class="home sections">
-            <div class="home__bg"></div>
-            <div class="home__container">
-                <div class="home__title">
-                    <h4 class="title__top">Hello,<br>I'm ready to work!!</h4>
-                    <h3 class="title__middle split">web publisher</h3>
-                    <h4 class="title__bottom">디자인도 코딩도, 모두 욕심있는 웹퍼블리셔</h4>
-                </div>
-                <button class="home__btn">
-                    contact me
-                </button>
-            </div>
-        </section>
-        <!-- home section -->
-        <!-- profile section2 -->
-        <section id="section2" class="profile sections">
-            <h2 class="section__title profile__title">profile</h2>
-            <h2 class="section__title profile__title2">profile</h2>
-            <div class="profile__content">
-                <div class="profile__img">
-                    <div class="img__wrapper">
-                        <img src="/src/img/profile.jpg" alt="프로필 사진">
-                    </div>
-                </div>
-                <div class="profile__my">
-                    <span class="my">채명지<br>1996.04.04<i> (만 25세)</i></span>
-                    <span class="profile__desc  profile__hope">어제보다 <b>더</b> 오늘보다 <b>더</b>.<br>끊임없이 도전하고 배워, 빠르게 변해가는
-                        웹트렌드에 <b>뒤쳐지지 않는 사람</b>이 되겠습니다.</span>
-                    <span class="profile__desc profile__career">강남하이미디어학원<br>영상을 활용한 UX/UI 웹디자인/웹퍼블리셔 과정
-                        수료<br><i>2021.04 -
-                            2021.09</i></span>
-                </div>
-            </div>
-        </section>
-        <!-- /profile section2 -->
-        <!-- skills section3 -->
-        <section id="section3" class="skills sections">
-            <h2 class="section__title skills__title"> skills</h2>
-            <ul class="skills__container">
-                <li class="skills__items">
-                    <span class="items__value" data-target="90">0</span>
-                    <div class="items__circle circle1">
-                        <div class="items__name"><span class="items__front"><i class="fab fa-html5"></i></span><span
-                                class="items__back">HTML5</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="skills__items">
-                    <span class="items__value" data-target="85">0</span>
-                    <div class="items__circle circle2">
-                        <div class="items__name"><span class="items__front"><i class="fab fa-css3-alt"></i></span><span
-                                class="items__back">CSS</span>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="skills__items">
-                    <span class="items__value" data-target="70">0</span>
-                    <div class="items__circle circle3">
-                        <div class="items__name"><span class="items__front"><i class="fab fa-js"></i></span><span
-                                class="items__back">JavaScript</span></div>
-                    </div>
-                </li>
-                <li class="skills__items">
-                    <span class="items__value" data-target="90">0</span>
-                    <div class="items__circle circle4">
-                        <div class="items__name"><span class="items__front"><i class="xi-photoshop"></i></span><span
-                                class="items__back">Photoshop</span></div>
-                    </div>
-
-                </li>
-                <li class="skills__items">
-                    <span class="items__value" data-target="80">0</span>
-                    <div class="items__circle circle5">
-                        <div class="items__name"><span class="items__front"><i class="xi-illustrator"></i></span><span
-                                class="items__back">Illustrator</span></div>
-                    </div>
-
-                </li>
-            </ul>
-        </section>
-        <!-- /skills section3 -->
-        <!-- works section4 -->
-        <section id="section4" class="works sections">
-            <article class="works__redesign articles">
-                <h2 class="article__title redisgn__title">redesign</h2>
-                <div class="works__bg">
-                    <div class="works__slides redesign__slides">
-                        <ul class="slides__flex">
-                            <li class="slides__list active">
-                                <div class="slide__cover"></div>
-                                <img src="src/img/projects/airbnb.png" alt="에어비앤비 리디자인 이미지">
-                                <div class="slides__con">
-                                    <span class="slides__num">01</span>
-                                    <span class="slides__title">Airbnb Redesign</span>
-                                    <span class="slides__desc">
-                                        팀 기획 / 개인 디자인 및 코딩<br>
-                                        Only PC size<br>
-                                        제작기간 : 약 2달
-                                    </span>
-                                    <div class="slides__btn">
-                                        <a href="https://github.com/chaeaw/renewal_airbnb.git" class="view__code"
-                                            target="_blank">View Code</a>
-                                        <a href="http://chaeaw04.cafe24.com/cmj_w/" class="view__page"
-                                            target="_blank">View Page</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="slides__list">
-                                <div class="slide__cover"></div>
-                                <img src="src/img/projects/pledis.png" alt="플레디스 리디자인 이미지">
-                                <div class="slides__con">
-                                    <span class="slides__num">02</span>
-                                    <span class="slides__title">Pledis Redesign</span>
-                                    <span class="slides__desc">
-                                        개인 디자인 및 코딩<br>
-                                        Responsive<br>
-                                        제작기간 : 약 2주
-                                    </span>
-                                    <div class="slides__btn">
-                                        <a href="https://github.com/chaeaw/renewal_pledis.git" class="view__code"
-                                            target="_blank">View Code</a>
-                                        <a href="http://chaeaw04.cafe24.com/cmj_r/" class="view__page"
-                                            target="_blank">View Page</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="left__blind"></div>
-                        <div class="right__cover"></div>
-                        <button class="prev redesign__prev"></button>
-                        <button class="next redesign__next"></button>
-                    </div>
-                </div>
-            </article>
-            <article class="works__create articles">
-                <h2 class="article__title create__title">create</h2>
-                <div class="works__bg">
-                    <div class="works__slides create__slides">
-                        <ul class="slides__flex">
-                            <li class="slides__list active">
-                                <div class="slide__cover"></div>
-                                <img src="src/img/projects/portfolio.png" alt="포트폴리오 이미지">
-                                <div class="slides__con">
-                                    <span class="slides__num">01</span>
-                                    <span class="slides__title">Portfolio Site</span>
-                                    <span class="slides__desc">
-                                        개인 디자인 및 코딩<br>
-                                        responsive<br>
-                                        제작기간 : 약 3주
-                                    </span>
-                                    <div class="slides__btn">
-                                        <a href="https://github.com/chaeaw/portfolio__2" class="view__code" target="_blank">View Code</a>
-                                        <a href="index.html" class="view__page" target="_blank">View
-                                            Page</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="slides__list">
-                                <div class="slide__cover"></div>
-                                <img src="src/img/projects/todolist.png" alt="투두리스트 이미지">
-                                <div class="slides__con">
-                                    <span class="slides__num">02</span>
-                                    <span class="slides__title">To Do List</span>
-                                    <span class="slides__desc">
-                                        개인 디자인 및 코딩<br>
-                                        Only PC size<br>
-                                        제작기간 : 약 1주
-                                    </span>
-                                    <div class="slides__btn">
-                                        <a href="#" class="view__code" target="_blank">View Code</a>
-                                        <a href="https://chaeaw.github.io/" class="view__page" target="_blank">View
-                                            Page</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="left__cover"></div>
-                        <button class="prev create__prev"></button>
-                        <button class="next create__next"></button>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <!-- /works section4 -->
-    </main>
-    <!-- contact footer -->
-    <footer id="footer" class="contact sections">
-        <h2 class="section__title">contact</h2>
-        <div class="contact__desc">
-            <p><span class="contact__title"><i class="far fa-envelope"></i>E-mail</span><span
-                    class="contact__email">chaeaw04@gmail.com</span></p>
-            <p><span class="contact__title"><i class="fab fa-github-square"></i>Github</span><a
-                    href="http://github.com/chaeaw" target="_blank" class="contact__github">http://github.com/chaeaw</a></p>
+  <header id="header">
+    <h1 class="logo">
+      <a href="#" class="logo__name">MJ's PORTFOLIO</a>
+    </h1>
+    <nav class="mobile__menu">
+      <div class="mobile__bar">
+        <span class="bars"></span><span class="bars"></span><span class="bars"></span>
+      </div>
+      <ul class="mobile__nav">
+        <li class="mobile__navItems selected" data-mlink="#section1">
+          <p><span>Home</span></p>
+        </li>
+        <li class="mobile__navItems" data-mlink="#section2">
+          <p><span>Profile</span></p>
+        </li>
+        <li class="mobile__navItems" data-mlink="#section3">
+          <p><span>Skills</span></p>
+        </li>
+        <li class="mobile__navItems" data-mlink="#section4">
+          <p><span>Works</span></p>
+        </li>
+        <li class="mobile__navItems" data-mlink="#footer">
+          <p><span>Contact</span></p>
+        </li>
+      </ul>
+    </nav>
+    <nav id="nav">
+      <ul class="nav__container">
+        <li class="nav__items selected" data-link="#section1">
+          <div class="navItems__circle"></div>
+          <span>home</span>
+        </li>
+        <li class="nav__items" data-link="#section2">
+          <div class="navItems__circle"></div>
+          <span>profile</span>
+        </li>
+        <li class="nav__items" data-link="#section3">
+          <div class="navItems__circle"></div>
+          <span>skills</span>
+        </li>
+        <li class="nav__items" data-link="#section4">
+          <div class="navItems__circle"></div>
+          <span>works</span>
+        </li>
+        <li class="nav__items" data-link="#footer">
+          <div class="navItems__circle"></div>
+          <span>contact</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="section1" class="home sections">
+      <div class="home__bg"></div>
+      <div class="home__container">
+        <div class="home__title">
+          <h4 class="title__top">Hello,<br />I'm ready to work!!</h4>
+          <h3 class="title__middle split">webpublisher</h3>
+          <h4 class="title__bottom">웹퍼블리셔</h4>
         </div>
-        <p class="contact__thx">thank you for<br>reveiwing my portfolio <br class="contact__br">.</p>
-    </footer>
-    <!-- /contact footer -->
+        <button class="home__btn">contact me</button>
+      </div>
+    </section>
+    <!-- home section -->
+    <!-- profile section2 -->
+    <section id="section2" class="profile sections">
+      <h2 class="section__title profile__title">profile</h2>
+      <h2 class="section__title profile__title2">profile</h2>
+      <div class="profile__content">
+        <div class="profile__img">
+          <div class="img__wrapper">
+            <img src="/src/img/profile.jpg" alt="프로필 사진" />
+          </div>
+        </div>
+        <div class="profile__my">
+          <span class="my">채명지<br />1996.04.04<i> (만 27세)</i></span>
+          <span class="profile__desc profile__hope">어제보다 <b>더</b> 오늘보다 <b>더</b>.<br />끊임없이 도전하고
+            멈춤없이 배워, 빠르게 변해가는 웹트렌드에 <b>뒤쳐지지 않는 사람</b>이
+            되겠습니다.</span>
+          <span class="profile__desc profile__career">강남하이미디어학원<br />영상을 활용한 UX/UI 웹디자인/웹퍼블리셔
+            과정 수료<br />
+            <i>2021.04 - 2021.09</i>
+          </span>
+          <span class="profile__desc profile__career">제로베이스<br />프론트엔드반 수강<br /><i>2022.04 - 2022.10</i></span>
+        </div>
+      </div>
+    </section>
+    <!-- /profile section2 -->
+    <!-- skills section3 -->
+    <section id="section3" class="skills sections">
+      <h2 class="section__title skills__title">skills</h2>
+      <ul class="skills__container">
+        <li class="skills__items">
+          <span class="items__value" data-target="90">0</span>
+          <div class="items__circle circle1">
+            <div class="items__name">
+              <span class="items__front"><i class="fab fa-html5"></i></span><span class="items__back">HTML5</span>
+            </div>
+          </div>
+        </li>
+        <li class="skills__items">
+          <span class="items__value" data-target="85">0</span>
+          <div class="items__circle circle2">
+            <div class="items__name">
+              <span class="items__front"><i class="fab fa-css3-alt"></i></span><span class="items__back">CSS</span>
+            </div>
+          </div>
+        </li>
+        <li class="skills__items">
+          <span class="items__value" data-target="70">0</span>
+          <div class="items__circle circle3">
+            <div class="items__name">
+              <span class="items__front"><i class="fab fa-js"></i></span><span class="items__back">JavaScript</span>
+            </div>
+          </div>
+        </li>
+        <li class="skills__items">
+          <span class="items__value" data-target="90">0</span>
+          <div class="items__circle circle4">
+            <div class="items__name">
+              <span class="items__front"><i class="xi-photoshop"></i></span><span class="items__back">Photoshop</span>
+            </div>
+          </div>
+        </li>
+        <li class="skills__items">
+          <span class="items__value" data-target="80">0</span>
+          <div class="items__circle circle5">
+            <div class="items__name">
+              <span class="items__front"><i class="xi-illustrator"></i></span><span
+                class="items__back">Illustrator</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!-- /skills section3 -->
+    <!-- works section4 -->
+    <section id="section4" class="works sections">
+      <article class="works__redesign articles">
+        <h2 class="article__title redisgn__title">redesign</h2>
+        <div class="works__bg">
+          <div class="works__slides redesign__slides">
+            <ul class="slides__flex">
+              <li class="slides__list active">
+                <div class="slide__cover"></div>
+                <img src="src/img/projects/airbnb.png" alt="에어비앤비 리디자인 이미지" />
+                <div class="slides__con">
+                  <span class="slides__num">01</span>
+                  <span class="slides__title">Airbnb Redesign</span>
+                  <span class="slides__desc">
+                    팀 기획 / 개인 디자인 및 코딩<br />
+                    Only PC size<br />
+                    제작기간 : 약 2달
+                  </span>
+                  <div class="slides__btn">
+                    <a href="https://github.com/chaeaw/renewal_airbnb.git" class="view__code" target="_blank">View
+                      Code</a>
+                    <a href="http://chaeaw04.cafe24.com/cmj_w/" class="view__page" target="_blank">View Page</a>
+                  </div>
+                </div>
+              </li>
+              <li class="slides__list">
+                <div class="slide__cover"></div>
+                <img src="src/img/projects/pledis.png" alt="플레디스 리디자인 이미지" />
+                <div class="slides__con">
+                  <span class="slides__num">02</span>
+                  <span class="slides__title">Pledis Redesign</span>
+                  <span class="slides__desc">
+                    개인 디자인 및 코딩<br />
+                    Responsive<br />
+                    제작기간 : 약 2주
+                  </span>
+                  <div class="slides__btn">
+                    <a href="https://github.com/chaeaw/renewal_pledis.git" class="view__code" target="_blank">View
+                      Code</a>
+                    <a href="http://chaeaw04.cafe24.com/cmj_r/" class="view__page" target="_blank">View Page</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="left__blind"></div>
+            <div class="right__cover"></div>
+            <button class="prev redesign__prev"></button>
+            <button class="next redesign__next"></button>
+          </div>
+        </div>
+      </article>
+      <article class="works__create articles">
+        <h2 class="article__title create__title">create</h2>
+        <div class="works__bg">
+          <div class="works__slides create__slides">
+            <ul class="slides__flex">
+              <li class="slides__list active">
+                <div class="slide__cover"></div>
+                <img src="src/img/projects/portfolio.png" alt="포트폴리오 이미지" />
+                <div class="slides__con">
+                  <span class="slides__num">01</span>
+                  <span class="slides__title">Portfolio Site</span>
+                  <span class="slides__desc">
+                    개인 디자인 및 코딩<br />
+                    responsive<br />
+                    제작기간 : 약 3주
+                  </span>
+                  <div class="slides__btn">
+                    <a href="https://github.com/chaeaw/portfolio__2" class="view__code" target="_blank">View Code</a>
+                    <a href="index.html" class="view__page" target="_blank">View Page</a>
+                  </div>
+                </div>
+              </li>
+              <li class="slides__list">
+                <div class="slide__cover"></div>
+                <img src="src/img/projects/todolist.png" alt="투두리스트 이미지" />
+                <div class="slides__con">
+                  <span class="slides__num">02</span>
+                  <span class="slides__title">To Do List</span>
+                  <span class="slides__desc">
+                    개인 디자인 및 코딩<br />
+                    Only PC size<br />
+                    제작기간 : 약 1주
+                  </span>
+                  <div class="slides__btn">
+                    <a href="#" class="view__code" target="_blank">View Code</a>
+                    <a href="https://chaeaw.github.io/" class="view__page" target="_blank">View Page</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="left__cover"></div>
+            <button class="prev create__prev"></button>
+            <button class="next create__next"></button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /works section4 -->
+  </main>
+  <!-- contact footer -->
+  <footer id="footer" class="contact sections">
+    <h2 class="section__title">contact</h2>
+    <div class="contact__desc">
+      <p>
+        <span class="contact__title"><i class="far fa-envelope"></i>E-mail</span><span
+          class="contact__email">chaeaw04@gmail.com</span>
+      </p>
+      <p>
+        <span class="contact__title"><i class="fab fa-github-square"></i>Github</span><a href="http://github.com/chaeaw"
+          target="_blank" class="contact__github">http://github.com/chaeaw</a>
+      </p>
+    </div>
+    <p class="contact__thx">
+      thank you for<br />reveiwing my portfolio <br class="contact__br" />.
+    </p>
+  </footer>
+  <!-- /contact footer -->
 
-    <script src="src/js/index.js"></script>
-    <script src="src/js/slide.js"></script>
+  <script src="src/js/index.js"></script>
+  <script src="src/js/slide.js"></script>
 </body>
 
 </html>
